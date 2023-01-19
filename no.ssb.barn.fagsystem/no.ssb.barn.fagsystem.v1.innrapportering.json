@@ -1,0 +1,19 @@
+{
+  "$id": "https://barn.ssb.no/document-incoming-xml.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DocumentReceivedMessage",
+  "description": "XML payload with XSD-version",
+  "required": [ "xsdVersion", "xmlBody" ],
+  "type" : "object",
+  "properties" : {
+    "xsdVersion" : {
+      "type" : "integer",
+      "minimum": 1,
+      "description": "XSD-version for xmlBody"
+    },
+    "xmlBody" : {
+      "type" : "string",
+      "description": "XML payload"
+    }
+  }
+}

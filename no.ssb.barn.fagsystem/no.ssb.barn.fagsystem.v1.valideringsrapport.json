@@ -1,0 +1,147 @@
+{
+  "$id": "https://barn.ssb.no/validation-report.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ValidationReport",
+  "description": "Validation report for validated XML payload",
+  "required": [
+    "severity"
+  ],
+  "type": "object",
+  "properties": {
+    "severity": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "INFO",
+        "WARNING",
+        "ERROR",
+        "FATAL"
+      ],
+      "description": "Most severe warning level found during the validation process."
+    },
+    "reportEntries": {
+      "type": "array",
+      "items": {
+        "title": "ReportEntry",
+        "description": "Report entry representing a single error/warning.",
+        "required": [
+          "warningLevel",
+          "ruleName",
+          "errorText",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "warningLevel": {
+            "type": "string",
+            "enum": [
+              "OK",
+              "INFO",
+              "WARNING",
+              "ERROR",
+              "FATAL"
+            ],
+            "description": "Warning level."
+          },
+          "ruleId": {
+            "type": "string",
+            "enum": [
+              "AFTERCARE_02A",
+              "AFTERCARE_02C",
+              "AFTERCARE_02E",
+              "CASE_FORWARDING_02E",
+              "CASE_FORWARDING_02F",
+              "CASE_FORWARDING_05",
+              "CASE_02A",
+              "CASE_06",
+              "CASE_07",
+              "CASE_08",
+              "DECISION_02A",
+              "DECISION_02C",
+              "DECISION_02E",
+              "DECISION_02F",
+              "DECISION_02G",
+              "DECISION_02H",
+              "DECISION_02I",
+              "DECISION_02J",
+              "DECISION_03",
+              "DECISION_04",
+              "DECISION_05",
+              "DECISION_20",
+              "INVESTIGATION_02A",
+              "INVESTIGATION_02C",
+              "INVESTIGATION_02E",
+              "INVESTIGATION_03",
+              "INVESTIGATION_07",
+              "INVESTIGATION_19",
+              "INVESTIGATION_20",
+              "INVESTIGATION_21",
+              "MEASURE_02A",
+              "MEASURE_02C",
+              "MEASURE_02E",
+              "MEASURE_05",
+              "MEASURE_06",
+              "MEASURE_07",
+              "MEASURE_08",
+              "MEASURE_09",
+              "MEASURE_12",
+              "MEASURE_13",
+              "MEASURE_14",
+              "MEASURE_19",
+              "MEASURE_20",
+              "MEASURE_21",
+              "MESSAGE_02A",
+              "MESSAGE_02",
+              "MESSAGE_02C",
+              "MESSAGE_02E",
+              "MESSAGE_03",
+              "MESSAGE_04",
+              "MESSAGE_05",
+              "MESSAGE_19",
+              "PERSONALIA_02F",
+              "PERSONALIA_11",
+              "PERSONALIA_12",
+              "PERSONALIA_13",
+              "PERSONALIA_14",
+              "PERSONALIA_15",
+              "PERSONALIA_16",
+              "PERSONALIA_17",
+              "PLAN_02A",
+              "PLAN_02C",
+              "PLAN_02E",
+              "PLAN_02F",
+              "PLAN_02G",
+              "RELOCATION_02C",
+              "RELOCATION_02F",
+              "REPORTER_01",
+              "REPORTER_02",
+              "SNAPSHOT_01",
+              "SNAPSHOT_02",
+              "XSD_VERSION",
+              "XSD_VALIDATION",
+              "JSON_DESERIALIZE",
+              "XML_DESERIALIZE"
+            ],
+            "description": "ID of rule that issued the warning/error."
+          },
+          "ruleName": {
+            "type": "string",
+            "description": "Name of rule that issued the warning/error."
+          },
+          "errorText": {
+            "type": "string",
+            "description": "Detailed warning/error description."
+          },
+          "type": {
+            "type": "string",
+            "description": "Warning/error context type name."
+          },
+          "id": {
+            "type": "string",
+            "description": "Warning/error context identifier (on UUID-format)."
+          }
+        }
+      }
+    }
+  }
+}
