@@ -1,5 +1,5 @@
 {
-  "$id": "https://barn.ssb.no/validation-report.schema.json",
+  "$id": "https://barnevern.ssb.no/validation-report.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ValidationReport",
   "description": "Validation report for validated XML payload",

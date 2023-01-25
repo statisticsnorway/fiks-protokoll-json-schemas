@@ -1,5 +1,5 @@
 {
-  "$id": "https://barn.ssb.no/document-incoming-xml.schema.json",
+  "$id": "https://barnevern.ssb.no/document-incoming-xml.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "DocumentReceivedMessage",
   "description": "XML payload with XSD-version",
