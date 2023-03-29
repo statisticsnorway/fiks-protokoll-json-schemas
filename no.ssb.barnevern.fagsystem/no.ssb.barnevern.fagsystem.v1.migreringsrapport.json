@@ -1,0 +1,45 @@
+{
+  "$id": "https://github.com/statisticsnorway/fiks-protokoll-json-schemas/blob/main/no.ssb.barnevern.fagsystem/no.ssb.barnevern.fagsystem.v1.migreringsrapport.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "migration-report-response-v1",
+  "description": "Migration report for specific municipality",
+  "type": "object",
+  "required": [
+    "municipalityId",
+    "migrationYear",
+    "isUsingMigrationId"
+  ],
+  "properties": {
+    "municipalityId": {
+      "type": "string",
+      "description": "Four-digit municipality ID"
+    },
+    "migrationYear": {
+      "type": "integer",
+      "minimum": 2023,
+      "description": "Year from municipality migration date"
+    },
+    "isUsingMigrationId": {
+      "type": "boolean",
+      "description": "true when one or more cases with migration-id detected"
+    },
+    "sak": {
+      "$ref": "https://github.com/statisticsnorway/fiks-protokoll-json-schemas/blob/main/no.ssb.barnevern.fagsystem/no.ssb.barnevern.fagsystem.v1.migrering.elementcounts.json"
+    },
+    "melding": {
+      "$ref": "https://github.com/statisticsnorway/fiks-protokoll-json-schemas/blob/main/no.ssb.barnevern.fagsystem/no.ssb.barnevern.fagsystem.v1.migrering.elementcounts.json"
+    },
+    "undersokelse": {
+      "$ref": "https://github.com/statisticsnorway/fiks-protokoll-json-schemas/blob/main/no.ssb.barnevern.fagsystem/no.ssb.barnevern.fagsystem.v1.migrering.elementcounts.json"
+    },
+    "relasjon": {
+      "$ref": "https://github.com/statisticsnorway/fiks-protokoll-json-schemas/blob/main/no.ssb.barnevern.fagsystem/no.ssb.barnevern.fagsystem.v1.migrering.elementcounts.json"
+    },
+    "plan": {
+      "$ref": "https://github.com/statisticsnorway/fiks-protokoll-json-schemas/blob/main/no.ssb.barnevern.fagsystem/no.ssb.barnevern.fagsystem.v1.migrering.elementcounts.json"
+    },
+    "tiltak": {
+      "$ref": "https://github.com/statisticsnorway/fiks-protokoll-json-schemas/blob/main/no.ssb.barnevern.fagsystem/no.ssb.barnevern.fagsystem.v1.migrering.elementcounts.json"
+    }
+  }
+}

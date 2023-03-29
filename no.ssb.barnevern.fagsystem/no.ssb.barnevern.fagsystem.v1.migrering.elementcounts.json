@@ -1,0 +1,60 @@
+{
+  "$id": "https://github.com/statisticsnorway/fiks-protokoll-json-schemas/blob/main/no.ssb.barnevern.fagsystem/no.ssb.barnevern.fagsystem.v1.migrering.elementcounts.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "migration-report-element-counts-v1",
+  "description": "Schema for counts and error section used in https://barn.ssb.no/migration-report-response.v1.schema.json",
+  "type": "object",
+  "required": [
+    "numberOfKostraItems",
+    "numberOfIdentifiedFagsystemItems"
+  ],
+  "properties": {
+    "numberOfKostraItems": {
+      "type": "integer",
+      "description": "Number of Kostra-items inspected"
+    },
+    "numberOfIdentifiedFagsystemItems": {
+      "type": "integer",
+      "description": "Number of Kostra-items inspected"
+    },
+    "errors": {
+      "type": "array",
+      "description": "Array of errors",
+      "items": {
+        "type": "object",
+        "required": [
+          "kostraJournalId",
+          "kostraId",
+          "errorType"
+        ],
+        "properties": {
+          "kostraJournalId": {
+            "type": "string",
+            "description": "Journal ID from Kostra"
+          },
+          "kostraId": {
+            "type": "string",
+            "description": "Element ID from Kostra"
+          },
+          "errorType": {
+            "type": "string",
+            "enum": [
+              "ElementNotFound",
+              "MultipleElementsFound",
+              "StartDateMismatch"
+            ],
+            "description": "Error type"
+          },
+          "fagsystemCaseId": {
+            "type": "string",
+            "description": "Case ID from fagsystem if present"
+          },
+          "migrertId": {
+            "type": "string",
+            "description": "Migration ID for element when present"
+          }
+        }
+      }
+    }
+  }
+}

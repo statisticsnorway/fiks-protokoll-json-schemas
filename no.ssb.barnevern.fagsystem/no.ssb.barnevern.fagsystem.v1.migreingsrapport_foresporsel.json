@@ -1,0 +1,45 @@
+{
+  "$id": "https://github.com/statisticsnorway/fiks-protokoll-json-schemas/blob/main/no.ssb.barnevern.fagsystem/no.ssb.barnevern.fagsystem.v1.migreingsrapport_foresporsel.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "migration-report-response-v1",
+  "description": "Migration report for specific municipality",
+  "type": "object",
+  "required": [
+    "municipalityId",
+    "migrationYear",
+    "isUsingMigrationId"
+  ],
+  "properties": {
+    "municipalityId": {
+      "type": "string",
+      "description": "Four-digit municipality ID"
+    },
+    "migrationYear": {
+      "type": "integer",
+      "minimum": 2023,
+      "description": "Year from municipality migration date"
+    },
+    "isUsingMigrationId": {
+      "type": "boolean",
+      "description": "true when one or more cases with migration-id detected"
+    },
+    "sak": {
+      "$ref": "https://barn.ssb.no/migration-element-counts.v1.schema.json"
+    },
+    "melding": {
+      "$ref": "https://barn.ssb.no/migration-element-counts.v1.schema.json"
+    },
+    "undersokelse": {
+      "$ref": "https://barn.ssb.no/migration-element-counts.v1.schema.json"
+    },
+    "relasjon": {
+      "$ref": "https://barn.ssb.no/migration-element-counts.v1.schema.json"
+    },
+    "plan": {
+      "$ref": "https://barn.ssb.no/migration-element-counts.v1.schema.json"
+    },
+    "tiltak": {
+      "$ref": "https://barn.ssb.no/migration-element-counts.v1.schema.json"
+    }
+  }
+}
