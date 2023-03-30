@@ -14,7 +14,7 @@
       "$id": "https://barnevern.ssb.no/migration-report-element-counts.schema.json",
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "title": "migration-report-element-counts-v1",
-      "description": "Schema for counts and error section used in https://barn.ssb.no/migration-report-response.v1.schema.json",
+      "description": "Schema for counts and error section",
       "type": "object",
       "required": [
         "numberOfKostraItems",
