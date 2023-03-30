@@ -1,6 +1,6 @@
 {
   "$id": "https://barnevern.ssb.no/migration-report.schema.json",
-  "$schema",: "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "migration-report-response-v1",
   "description": "Migration report for specific municipality",
   "type": "object",
