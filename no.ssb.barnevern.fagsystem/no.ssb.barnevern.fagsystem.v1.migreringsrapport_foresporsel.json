@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/statisticsnorway/fiks-protokoll-json-schemas/blob/main/no.ssb.barnevern.fagsystem/no.ssb.barnevern.fagsystem.v1.migreringsrapport_foresporsel.json",
+  "$id": "https://barnevern.ssb.no/migration-report-request.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "migration-report-request",
   "description": "Migration report request",
