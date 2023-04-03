@@ -67,6 +67,10 @@
                 "type": "string",
                 "description": "Case ID from fagsystem if present"
               },
+              "fagsystemId": {
+                "type": "string",
+                "description": "Element ID from fagsystem if present"
+              },
               "migrertId": {
                 "type": "string",
                 "description": "Migration ID for element when present"
