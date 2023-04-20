@@ -43,6 +43,13 @@
             ],
             "description": "Warning level."
           },
+          "originalWarningLevel": {
+            "type": "string",
+            "enum": [
+              "ERROR"
+            ],
+            "description": "Original warning level if error is downgraded because of data migration"
+          },
           "ruleId": {
             "type": "string",
             "enum": [
