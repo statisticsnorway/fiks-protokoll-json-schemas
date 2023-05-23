@@ -11,12 +11,22 @@
     "municipalityId": {
       "type": "string",
       "description": "Four-digit municipality ID, zero left padded",
-      "pattern": "^[\\d]{4}$"
+      "pattern": "^\\d{4}$"
     },
     "migrationYear": {
       "type": "integer",
       "minimum": 2023,
       "description": "Year from municipality migration date"
+    },
+    "districtId": {
+      "type": "string",
+      "description": "Two-digit district ID, zero left padded. For municipalities with multiple reporters",
+      "pattern": "^\\d{2}$"
+    },
+    "fagsystemMunicipalityId": {
+      "type": "string",
+      "description": "Four-digit municipality ID, zero left padded. Used when municipality ID changed in migration year",
+      "pattern": "^\\d{4}$"
     }
   }
 }
