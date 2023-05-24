@@ -86,6 +86,10 @@
       "type": "string",
       "description": "Four-digit municipality ID"
     },
+    "districtId": {
+      "type": "string",
+      "description": "Two-digit district ID"
+    },
     "migrationYear": {
       "type": "integer",
       "minimum": 2023,
