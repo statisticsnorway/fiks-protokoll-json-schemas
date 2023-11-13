@@ -145,6 +145,24 @@
             "type": "string",
             "description": "Detailed warning/error description."
           },
+          "contextType": {
+            "type": "string",
+            "enum": [
+              "AFTERCARE",
+              "CASE_FORWARDING",
+              "DECISION",
+              "INVESTIGATION",
+              "MEASURE",
+              "MESSAGE",
+              "PERSONALIA",
+              "PLAN",
+              "RELATION",
+              "RELOCATION",
+              "CASE",
+              "DELETED"
+            ],
+            "description": "Warning/error context type."
+          },
           "contextId": {
             "type": "string",
             "description": "Warning/error context identifier (on UUID-format)."
