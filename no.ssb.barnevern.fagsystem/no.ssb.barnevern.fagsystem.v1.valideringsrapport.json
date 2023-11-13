@@ -27,8 +27,7 @@
         "required": [
           "warningLevel",
           "ruleName",
-          "errorText",
-          "type"
+          "errorText"
         ],
         "type": "object",
         "properties": {
