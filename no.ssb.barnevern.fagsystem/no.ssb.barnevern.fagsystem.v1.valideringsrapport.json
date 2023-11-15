@@ -27,8 +27,7 @@
         "required": [
           "warningLevel",
           "ruleName",
-          "errorText",
-          "type"
+          "errorText"
         ],
         "type": "object",
         "properties": {
@@ -59,10 +58,11 @@
               "CASE_FORWARDING_02E",
               "CASE_FORWARDING_02F",
               "CASE_FORWARDING_05",
+              "CASE_01",
               "CASE_02A",
-              "CASE_06",
               "CASE_07",
               "CASE_08",
+              "CASE_21",
               "DECISION_02A",
               "DECISION_02C",
               "DECISION_02E",
@@ -74,6 +74,7 @@
               "DECISION_03",
               "DECISION_04",
               "DECISION_05",
+              "DECISION_19",
               "DECISION_20",
               "INVESTIGATION_02A",
               "INVESTIGATION_02C",
@@ -94,7 +95,6 @@
               "MEASURE_12",
               "MEASURE_13",
               "MEASURE_14",
-              "MEASURE_15",
               "MEASURE_19",
               "MEASURE_20",
               "MEASURE_21",
@@ -121,6 +121,7 @@
               "PLAN_02E",
               "PLAN_02F",
               "PLAN_02G",
+              "PLAN_19",
               "RELOCATION_02C",
               "RELOCATION_02F",
               "REPORTER_01",
@@ -143,11 +144,25 @@
             "type": "string",
             "description": "Detailed warning/error description."
           },
-          "type": {
+          "contextType": {
             "type": "string",
-            "description": "Warning/error context type name."
+            "enum": [
+              "AFTERCARE",
+              "CASE_FORWARDING",
+              "DECISION",
+              "INVESTIGATION",
+              "MEASURE",
+              "MESSAGE",
+              "PERSONALIA",
+              "PLAN",
+              "RELATION",
+              "RELOCATION",
+              "CASE",
+              "DELETED"
+            ],
+            "description": "Warning/error context type."
           },
-          "id": {
+          "contextId": {
             "type": "string",
             "description": "Warning/error context identifier (on UUID-format)."
           }
