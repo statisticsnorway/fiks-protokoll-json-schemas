@@ -5,4 +5,5 @@ tjenesten [Fiks Protokoll](https://developers.fiks.ks.no/tjenester/fiksprotokoll
 
 
 Følgende domener er representert i dette repoet:
-- [Barnevern](./no.ssb.barn.fagsystem)
+- [Barnevern](./no.ssb.barnevern.fagsystem)
+- [Sosialtjenesten](./no.ssb.sosialtjenesten.fagsystem)
