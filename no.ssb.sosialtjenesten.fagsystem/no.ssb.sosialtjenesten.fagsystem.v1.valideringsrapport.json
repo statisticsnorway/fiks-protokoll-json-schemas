@@ -1,0 +1,75 @@
+{
+  "$id": "https://sosialtjenesten.ssb.no/validation-report.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ValidationReport",
+  "description": "Validation report for validated JSON payload",
+  "required": [
+    "severity"
+  ],
+  "type": "object",
+  "properties": {
+    "severity": {
+      "$ref": "#/$defs/severity",
+      "description": "Most severe level found during the validation process."
+    },
+    "reportEntries": {
+      "type": "array",
+      "items": {
+        "title": "ReportEntry",
+        "description": "Report entry representing a single outcome of a validation.",
+        "required": [
+          "severity",
+          "ruleName",
+          "description"
+        ],
+        "type": "object",
+        "properties": {
+          "severity": {
+            "description": "Severity level.",
+            "$ref": "#/$defs/severity"
+          },
+          "originalSeverityLevel": {
+            "type": "string",
+            "enum": [
+              "ERROR"
+            ],
+            "description": "Original severity level if severity is downgraded because of data migration"
+          },
+          "ruleId": {
+            "type": "string",
+            "description": "ID of rule that issued the report entry."
+          },
+          "ruleName": {
+            "type": "string",
+            "description": "Name of rule that issued the report entry."
+          },
+          "message": {
+            "type": "string",
+            "description": "Validation message, a detailed text describing what went wrong and how to correct."
+          },
+          "contextType": {
+            "type": "string",
+            "description": "Validation context type."
+          },
+          "contextId": {
+            "type": "string",
+            "description": "Validation context identifier (on UUID-format).",
+            "format": "uuid"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "severity": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "INFO",
+        "WARNING",
+        "ERROR",
+        "FATAL"
+      ]
+    }
+  }
+}
