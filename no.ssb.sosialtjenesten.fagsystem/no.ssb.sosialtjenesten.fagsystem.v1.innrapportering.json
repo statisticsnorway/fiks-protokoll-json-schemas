@@ -2,8 +2,8 @@
   "$id": "https://sosialtjenesten.ssb.no/document-incoming-json.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "DocumentReceivedMessage",
-  "description": "XML payload with XSD-version",
-  "required": [ "schema","schemaVersion", "xmlBody" ],
+  "description": "JSON payload with versioned JSON-schema",
+  "required": [ "schema","schemaVersion", "jsonBody" ],
   "type" : "object",
   "properties" : {
     "schemaType" : {
