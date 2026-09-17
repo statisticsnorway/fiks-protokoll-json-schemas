@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "DocumentReceivedMessage",
   "description": "JSON payload with versioned JSON-schema",
-  "required": [ "schema","schemaVersion", "jsonBody" ],
+  "required": [ "schemaType","schemaVersion", "jsonBody" ],
   "type" : "object",
   "properties" : {
     "schemaType" : {
